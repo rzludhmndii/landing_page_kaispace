@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* offset supaya anchor tidak tertutup header fixed */
+    scroll-padding-top: 96px;
+  }
+
+  body {
+    @apply bg-background text-on-surface font-sans antialiased;
+  }
+
+  /* Fallback definisi Material Symbols. Google Fonts sudah mengirim aturan
+     yang sama; ini menjaga ikon tetap benar bila stylesheet eksternal gagal. */
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    font-feature-settings: 'liga';
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24;
+  }
+
+  .material-symbols-outlined.icon-filled {
+    font-variation-settings:
+      'FILL' 1,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24;
+  }
+}
+
+@layer components {
+  /* Glassmorphism header (DESIGN.md > Navigation Header) */
+  .glass-effect {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  /* DESIGN.md > Elevation & Depth */
+  .soft-shadow,
+  .ambient-shadow {
+    box-shadow: 0 10px 40px rgba(26, 26, 46, 0.05);
+  }
+
+  .hover-lift {
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 50px rgba(26, 26, 46, 0.08);
+  }
+}
