@@ -51,8 +51,8 @@ export default function FeaturesBento() {
               <h3 className="font-headline-sm text-headline-sm text-on-surface mb-2">Mode Fokus</h3>
             </div>
             <p className="font-body-md text-body-md text-on-surface-variant">
-              Masuk ke ruang privat untuk kerja mendalam. Status Anda otomatis berubah, mencegah
-              gangguan yang tidak perlu.
+              Masuk ke zona fokus yang bisa dikunci. Status Anda terlihat oleh tim, jadi kerja
+              mendalam tidak terpotong sapaan.
             </p>
           </div>
 
@@ -67,8 +67,7 @@ export default function FeaturesBento() {
               </h3>
             </div>
             <p className="font-body-md text-body-md text-on-surface-variant">
-              Layar berbagi multi-pengguna, papan tulis interaktif, dan chat terintegrasi dalam satu
-              layar.
+              Berbagi layar, rekam jalannya sesi, dan chat yang mengikuti zona tempat Anda berada.
             </p>
           </div>
 

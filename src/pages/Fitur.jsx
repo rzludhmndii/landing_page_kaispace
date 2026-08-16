@@ -1,49 +1,104 @@
 import FeatureRow from '../sections/fitur/FeatureRow.jsx'
 import KemampuanGrid from '../sections/fitur/KemampuanGrid.jsx'
 
+// Deskripsi di bawah mengikuti kemampuan yang benar-benar berjalan di aplikasi
+// KaiSpace (route server dan/atau komponen UI). Lihat catatan di README sebelum
+// menambah entri baru.
 const FEATURES = [
   {
     icon: 'group',
     iconClassName: 'bg-secondary-container/20 text-secondary-container',
     title: 'Kolaborasi Instan',
     description:
-      'Hilangkan batasan fisik dengan proximity chat. Dekati rekan tim Anda di ruang virtual untuk langsung mulai berbicara, persis seperti di kantor sungguhan. Bergabung dengan percakapan hanya dengan satu klik tanpa perlu menjadwalkan meeting formal.',
-    bullets: ['Sistem audio spasial yang realistis.', 'Indikator ketersediaan real-time.'],
+      'Dekati avatar rekan tim, dan suara langsung tersambung — tanpa undangan, tanpa tautan meeting. Volume mengikuti jarak, persis seperti mendekati meja seseorang di kantor sungguhan.',
+    bullets: [
+      'Audio & video aktif otomatis dalam radius tiga tile.',
+      'Panggilan langsung antar-peserta, bukan lewat server perantara.',
+      'Emote, angkat tangan, colek, dan ikuti rekan berjalan.',
+      'Papan nama, status khusus, dan alasan saat sedang pergi.',
+    ],
     image: '/images/fitur-kolaborasi-instan.svg',
-    imageAlt: 'Kolaborasi Instan',
+    imageAlt: 'Avatar tim saling mendekat dan otomatis tersambung suara',
     reversed: false,
   },
   {
     icon: 'do_not_disturb_on',
     iconClassName: 'bg-primary/10 text-primary',
-    title: 'Minimalkan Distraksi',
+    title: 'Fokus & Kontrol Akses',
     description:
-      "Jaga fokus tim dengan tampilan yang disederhanakan dan kontrol status ketersediaan yang jelas. Setel mode 'Sedang Fokus' untuk mencegah interupsi saat Anda mengerjakan tugas penting.",
-    bullets: ['Filter notifikasi berbasis konteks.', "Ruang kerja pribadi ('Zen Mode')."],
+      'Zona kerja bisa dikunci per peran, lengkap dengan antrean dan pemesanan slot. Percakapan di dalam zona tidak bocor keluar, dan rapat tidak lagi disela orang lewat.',
+    bullets: [
+      'Zona berlabel: meeting, meja kerja, fokus, dan umum.',
+      'Kunci zona serta pintu berdasarkan peran anggota.',
+      'Antrean otomatis dan persetujuan sebelum seseorang masuk.',
+      'Chat khusus zona — hanya sampai ke orang di ruangan yang sama.',
+    ],
     image: '/images/fitur-minimalkan-distraksi.svg',
-    imageAlt: 'Minimalkan Distraksi',
+    imageAlt: 'Zona fokus terkunci dengan antrean masuk',
     reversed: true,
   },
   {
-    icon: 'forum',
+    icon: 'videocam',
     iconClassName: 'bg-tertiary-container/20 text-tertiary-container',
-    title: 'Komunikasi Lengkap',
+    title: 'Rapat Lengkap & Terekam',
     description:
-      'Lebih dari sekadar obrolan suara. Fasilitasi meeting yang efektif dengan fitur screen sharing resolusi tinggi, perekaman otomatis, reaksi emoji interaktif, dan chat terintegrasi yang tersinkronisasi.',
-    bullets: ['Screen sharing multi-monitor.', 'Papan tulis digital kolaboratif.'],
+      'Berbagi layar, rekam jalannya sesi, lalu simpan catatannya. Setiap pertemuan meninggalkan jejak yang bisa dibuka lagi, bukan hilang begitu peserta keluar.',
+    bullets: [
+      'Berbagi layar ke peserta yang sedang terhubung.',
+      'Perekaman sesi dengan tautan unduh berbatas waktu.',
+      'Catatan pertemuan tersimpan per rapat.',
+      'Chat kanal, pesan langsung, dan lampiran berkas.',
+    ],
     image: '/images/fitur-komunikasi-lengkap.svg',
-    imageAlt: 'Komunikasi Lengkap',
+    imageAlt: 'Rapat dengan berbagi layar dan perekaman berjalan',
     reversed: false,
   },
   {
     icon: 'dashboard_customize',
     iconClassName: 'bg-primary/10 text-primary',
-    title: 'Kustomisasi Ruang',
+    title: 'Ruang yang Anda Rancang Sendiri',
     description:
-      'Bangun kantor yang mencerminkan budaya perusahaan Anda. Gunakan template siap pakai atau rancang area tim spesifik dari awal. Dukungan penuh untuk mode terang dan gelap agar sesuai dengan preferensi tiap anggota tim.',
-    bullets: ['Ratusan aset furnitur virtual.', 'Tema warna bermerek perusahaan.'],
+      'Cat lantainya, tata furniturnya, gambar zonanya. Denah kantor mengikuti cara tim Anda bekerja, bukan sebaliknya.',
+    bullets: [
+      'Editor ruang dengan palet furnitur berkategori.',
+      'Portal antar-ruang dan titik teleport tersimpan.',
+      'Duduk di kursi, klaim meja, dan tempel catatan.',
+      'Minimap, kontrol zoom, dan mode ringkas.',
+    ],
     image: '/images/fitur-kustomisasi-ruang.svg',
-    imageAlt: 'Kustomisasi Ruang',
+    imageAlt: 'Editor ruang dengan palet furnitur dan zona',
+    reversed: true,
+  },
+  {
+    icon: 'how_to_reg',
+    iconClassName: 'bg-secondary-container/20 text-secondary-container',
+    title: 'Kehadiran & Jam Kerja',
+    description:
+      'Absensi yang terikat lokasi dan jaringan kantor, dengan aturan shift yang Anda tentukan sendiri. Keterlambatan dan lembur terhitung otomatis, tanpa rekap manual.',
+    bullets: [
+      'Clock in/out dengan geofence dan pembatasan alamat IP.',
+      'Shift, toleransi keterlambatan, dan jam istirahat.',
+      'Perhitungan lembur mengikuti aturan organisasi.',
+      'Pengajuan koreksi absensi dan cuti berjenjang.',
+    ],
+    image: '/images/fitur-kehadiran.svg',
+    imageAlt: 'Panel absensi dengan geofence dan aturan shift',
+    reversed: false,
+  },
+  {
+    icon: 'event_available',
+    iconClassName: 'bg-primary/10 text-primary',
+    title: 'Kalender, Tugas & Analitik',
+    description:
+      'Jadwal, pekerjaan harian, dan kondisi tim berada di tempat yang sama dengan ruang kerjanya — jadi tidak perlu berpindah aplikasi untuk tahu apa yang sedang berjalan.',
+    bullets: [
+      'Acara berulang, pengingat, dan ekspor ke format ICS.',
+      'Pemesanan ruang meeting yang tersambung ke ruang virtual.',
+      'Daftar tugas harian per anggota.',
+      'Ringkasan keterlibatan, waktu respons, dan penyelesaian tugas.',
+    ],
+    image: '/images/fitur-kalender-analitik.svg',
+    imageAlt: 'Kalender tim, daftar tugas, dan ringkasan analitik',
     reversed: true,
   },
 ]
@@ -59,8 +114,8 @@ export default function Fitur() {
             Fitur KaiSpace
           </h1>
           <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
-            Ruang kerja virtual yang dirancang untuk produktivitas tim jarak jauh. Ciptakan koneksi,
-            minimalkan friksi, dan bangun budaya kerja yang positif.
+            Bukan sekadar ruang mengobrol. KaiSpace menyatukan kantor virtual, kehadiran, dan
+            koordinasi tim jarak jauh dalam satu tempat yang sama.
           </p>
         </div>
       </header>

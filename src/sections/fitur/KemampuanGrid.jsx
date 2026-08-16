@@ -67,7 +67,10 @@ const KATEGORI = [
 
 export default function KemampuanGrid() {
   return (
-    <section className="px-gutter bg-surface-container-low py-section-padding-mobile md:py-section-padding-desktop">
+    // Putih penuh: sengaja beda dari `background` maupun `surface-container-low`
+    // yang dipakai baris fitur di atas, supaya batas antar-section tetap terlihat
+    // berapa pun jumlah baris fiturnya.
+    <section className="px-gutter bg-surface-container-lowest py-section-padding-mobile md:py-section-padding-desktop">
       <div className="max-w-container-max mx-auto">
         <div className="text-center mb-16 max-w-2xl mx-auto">
           <h2 className="font-headline-md text-headline-md text-on-background mb-4">

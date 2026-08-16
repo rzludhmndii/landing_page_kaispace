@@ -16,8 +16,8 @@ export default function Solusi() {
               <span className="text-primary-container">Untuk Siapa Saja.</span>
             </h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
-              Temukan bagaimana KaiSpace menghubungkan tim, komunitas, dan acara dalam lingkungan
-              virtual yang hangat, produktif, dan mudah diakses.
+              Dari percakapan sehari-hari sampai pertanggungjawaban jam kerja — KaiSpace menyatukan
+              ruang kerja tim jarak jauh Anda dalam satu tempat yang hangat dan mudah diakses.
             </p>
           </div>
           <div className="relative min-w-0 h-[400px] w-full rounded-2xl overflow-hidden shadow-soft border border-outline-variant/30">

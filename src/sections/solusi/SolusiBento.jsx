@@ -12,8 +12,8 @@ export default function SolusiBento() {
             Solusi Fleksibel untuk Kebutuhan Anda
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
-            Dirancang untuk beradaptasi dengan cara Anda bekerja dan berinteraksi. KaiSpace
-            menyediakan kanvas kosong untuk budaya unik Anda.
+            Satu ruang kerja yang menyesuaikan diri dengan cara tim Anda beroperasi — dari
+            percakapan sehari-hari sampai kepatuhan jam kerja.
           </p>
         </div>
 
@@ -30,9 +30,9 @@ export default function SolusiBento() {
                   Tim Remote &amp; Hybrid
                 </h3>
                 <p className="font-body-md text-body-md text-on-surface-variant max-w-md">
-                  Kembalikan koneksi spontan antar rekan kerja. Bekerja bersama seolah berada di
-                  ruangan yang sama, kurangi kelelahan video call, dan bangun budaya perusahaan yang
-                  kuat dari mana saja.
+                  Kembalikan percakapan singkat yang hilang saat tim terpisah. Mendekat ke rekan
+                  sudah cukup untuk mulai bicara, zona fokus menjaga kerja mendalam tetap tenang,
+                  dan semua orang tahu siapa sedang ada di mana tanpa harus bertanya.
                 </p>
               </div>
               <div className="mt-6 flex items-center gap-2 text-primary-container font-label-bold text-label-bold cursor-pointer group-hover:gap-4 transition-all">
@@ -46,14 +46,14 @@ export default function SolusiBento() {
           <div className={`${CARD_BASE} p-6`}>
             <div>
               <div className="w-10 h-10 bg-secondary-container/10 rounded-lg flex items-center justify-center mb-4 text-secondary-container">
-                <Icon name="celebration" filled />
+                <Icon name="how_to_reg" filled />
               </div>
               <h3 className="font-headline-sm text-headline-sm text-on-background mb-2">
-                Acara Virtual
+                Operasional &amp; Kepatuhan
               </h3>
               <p className="font-body-md text-body-md text-on-surface-variant text-sm">
-                Ciptakan pengalaman acara yang tak terlupakan. Networking organik, presentasi
-                interaktif, dan ruang khusus sponsor dalam satu platform.
+                Untuk organisasi yang harus mempertanggungjawabkan jam kerja. Absensi terikat lokasi
+                dan jaringan, shift dan lembur terhitung sendiri, cuti lewat alur persetujuan.
               </p>
             </div>
           </div>
@@ -62,14 +62,14 @@ export default function SolusiBento() {
           <div className={`${CARD_BASE} p-6`}>
             <div>
               <div className="w-10 h-10 bg-tertiary-container/10 rounded-lg flex items-center justify-center mb-4 text-tertiary-container">
-                <Icon name="forum" filled />
+                <Icon name="diversity_3" filled />
               </div>
               <h3 className="font-headline-sm text-headline-sm text-on-background mb-2">
-                Komunitas Online
+                Kerja Lintas Organisasi
               </h3>
               <p className="font-body-md text-body-md text-on-surface-variant text-sm">
-                Beri komunitas Anda tempat untuk &apos;nongkrong&apos;. Fasilitasi diskusi hangat
-                dan kegiatan bersama di luar forum teks biasa.
+                Undang klien, vendor, atau tim mitra lewat tautan tamu berbatas. Setiap tindakan
+                penting punya jejak audit, dan kebijakan berbagi dipegang di tingkat organisasi.
               </p>
             </div>
           </div>

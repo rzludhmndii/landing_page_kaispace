@@ -20,6 +20,8 @@ komponen yang tercantum.
 | `public/images/fitur-minimalkan-distraksi.svg` | `src/pages/Fitur.jsx` | 4:3 | UI mode 'Do Not Disturb' di ruang kerja virtual. Minimalis, latar putih lembut, avatar dengan glow ungu halus, banyak whitespace. |
 | `public/images/fitur-komunikasi-lengkap.svg` | `src/pages/Fitur.jsx` | 4:3 | UI video conference di dalam layout kantor virtual: screen share grafik, feed video peserta, reaksi emoji melayang. Light mode, aksen ungu. |
 | `public/images/fitur-kustomisasi-ruang.svg` | `src/pages/Fitur.jsx` | 4:3 | Split-screen builder ruang: satu sisi open-plan terang, satu sisi focus area gelap. Drag-and-drop, sudut membulat, highlight ungu. |
+| `public/images/fitur-kehadiran.svg` | `src/pages/Fitur.jsx` | 4:3 | Panel absensi: tombol clock in/out, peta geofence kecil, ringkasan shift & lembur. Light mode, aksen ungu brand. |
+| `public/images/fitur-kalender-analitik.svg` | `src/pages/Fitur.jsx` | 4:3 | Tampilan kalender tim berdampingan dengan daftar tugas harian dan kartu ringkasan analitik. Light mode, aksen ungu brand. |
 | `public/images/solusi-hero.svg` | `src/pages/Solusi.jsx` | ±4:3 (dipakai `bg-cover`, tinggi 400px) | Ilustrasi hangat: avatar beragam berinteraksi di ruang kantor virtual modern bergaya. Putih lembut, abu halus, aksen ungu brand `#3B1E54`. |
 
 ## Warna aset
