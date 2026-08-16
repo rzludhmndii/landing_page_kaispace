@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import PricingCards from '../sections/harga/PricingCards.jsx'
 import Faq from '../sections/harga/Faq.jsx'
 
@@ -27,12 +28,12 @@ export default function Harga() {
           <p className="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg">
             Bergabunglah dengan ribuan tim yang telah beralih ke KaiSpace.
           </p>
-          <button
-            type="button"
-            className="px-8 py-4 rounded-lg bg-primary-container text-on-primary font-label-bold text-label-bold hover:bg-primary-hover transition-colors shadow-lg"
+          <Link
+            to="/checkout?plan=pro"
+            className="inline-block px-8 py-4 rounded-lg bg-primary-container text-on-primary font-label-bold text-label-bold hover:bg-primary-hover transition-colors shadow-lg"
           >
             Mulai Uji Coba Gratis
-          </button>
+          </Link>
         </div>
       </section>
     </div>

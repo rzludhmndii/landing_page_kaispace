@@ -1,3 +1,4 @@
+﻿import { Link } from 'react-router-dom'
 import FeatureRow from '../sections/fitur/FeatureRow.jsx'
 import KemampuanGrid from '../sections/fitur/KemampuanGrid.jsx'
 
@@ -10,14 +11,14 @@ const FEATURES = [
     iconClassName: 'bg-secondary-container/20 text-secondary-container',
     title: 'Kolaborasi Instan',
     description:
-      'Dekati avatar rekan tim, dan suara langsung tersambung — tanpa undangan, tanpa tautan meeting. Volume mengikuti jarak, persis seperti mendekati meja seseorang di kantor sungguhan.',
+      'Dekati avatar rekan tim, dan suara langsung tersambung â€” tanpa undangan, tanpa tautan meeting. Volume mengikuti jarak, persis seperti mendekati meja seseorang di kantor sungguhan.',
     bullets: [
       'Audio & video aktif otomatis dalam radius tiga tile.',
       'Panggilan langsung antar-peserta, bukan lewat server perantara.',
       'Emote, angkat tangan, colek, dan ikuti rekan berjalan.',
       'Papan nama, status khusus, dan alasan saat sedang pergi.',
     ],
-    image: '/images/fitur-kolaborasi-instan.svg',
+    image: '/landing-assets/images/fitur-kolaborasi-instan.svg',
     imageAlt: 'Avatar tim saling mendekat dan otomatis tersambung suara',
     reversed: false,
   },
@@ -31,9 +32,9 @@ const FEATURES = [
       'Zona berlabel: meeting, meja kerja, fokus, dan umum.',
       'Kunci zona serta pintu berdasarkan peran anggota.',
       'Antrean otomatis dan persetujuan sebelum seseorang masuk.',
-      'Chat khusus zona — hanya sampai ke orang di ruangan yang sama.',
+      'Chat khusus zona â€” hanya sampai ke orang di ruangan yang sama.',
     ],
-    image: '/images/fitur-minimalkan-distraksi.svg',
+    image: '/landing-assets/images/fitur-minimalkan-distraksi.svg',
     imageAlt: 'Zona fokus terkunci dengan antrean masuk',
     reversed: true,
   },
@@ -49,7 +50,7 @@ const FEATURES = [
       'Catatan pertemuan tersimpan per rapat.',
       'Chat kanal, pesan langsung, dan lampiran berkas.',
     ],
-    image: '/images/fitur-komunikasi-lengkap.svg',
+    image: '/landing-assets/images/fitur-komunikasi-lengkap.svg',
     imageAlt: 'Rapat dengan berbagi layar dan perekaman berjalan',
     reversed: false,
   },
@@ -65,7 +66,7 @@ const FEATURES = [
       'Duduk di kursi, klaim meja, dan tempel catatan.',
       'Minimap, kontrol zoom, dan mode ringkas.',
     ],
-    image: '/images/fitur-kustomisasi-ruang.svg',
+    image: '/landing-assets/images/fitur-kustomisasi-ruang.svg',
     imageAlt: 'Editor ruang dengan palet furnitur dan zona',
     reversed: true,
   },
@@ -81,7 +82,7 @@ const FEATURES = [
       'Perhitungan lembur mengikuti aturan organisasi.',
       'Pengajuan koreksi absensi dan cuti berjenjang.',
     ],
-    image: '/images/fitur-kehadiran.svg',
+    image: '/landing-assets/images/fitur-kehadiran.svg',
     imageAlt: 'Panel absensi dengan geofence dan aturan shift',
     reversed: false,
   },
@@ -90,14 +91,14 @@ const FEATURES = [
     iconClassName: 'bg-primary/10 text-primary',
     title: 'Kalender, Tugas & Analitik',
     description:
-      'Jadwal, pekerjaan harian, dan kondisi tim berada di tempat yang sama dengan ruang kerjanya — jadi tidak perlu berpindah aplikasi untuk tahu apa yang sedang berjalan.',
+      'Jadwal, pekerjaan harian, dan kondisi tim berada di tempat yang sama dengan ruang kerjanya â€” jadi tidak perlu berpindah aplikasi untuk tahu apa yang sedang berjalan.',
     bullets: [
       'Acara berulang, pengingat, dan ekspor ke format ICS.',
       'Pemesanan ruang meeting yang tersambung ke ruang virtual.',
       'Daftar tugas harian per anggota.',
       'Ringkasan keterlibatan, waktu respons, dan penyelesaian tugas.',
     ],
-    image: '/images/fitur-kalender-analitik.svg',
+    image: '/landing-assets/images/fitur-kalender-analitik.svg',
     imageAlt: 'Kalender tim, daftar tugas, dan ringkasan analitik',
     reversed: true,
   },
@@ -151,18 +152,18 @@ export default function Fitur() {
               bersama, di mana pun mereka berada.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a
+              <Link
                 className="font-label-bold text-label-bold bg-surface text-primary px-8 py-3 rounded-lg hover:bg-surface-bright transition-colors shadow-sm active:scale-95 duration-200"
-                href="#"
+                to="/checkout?plan=pro"
               >
                 Mulai Gratis Sekarang
-              </a>
-              <a
+              </Link>
+              <Link
                 className="font-label-bold text-label-bold border border-surface text-on-primary px-8 py-3 rounded-lg hover:bg-surface/10 transition-colors active:scale-95 duration-200"
-                href="#"
+                to="/solusi#kontak"
               >
                 Jadwalkan Demo
-              </a>
+              </Link>
             </div>
           </div>
         </section>

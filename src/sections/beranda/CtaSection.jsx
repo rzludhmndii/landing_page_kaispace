@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function CtaSection() {
   return (
     <section className="py-section-padding-mobile md:py-section-padding-desktop px-gutter bg-surface-container-lowest">
@@ -20,18 +22,18 @@ export default function CtaSection() {
             menyenangkan dan produktif.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <a
+            <Link
               className="font-label-bold text-label-bold bg-white text-primary-container px-8 py-4 rounded-lg hover:bg-surface-container transition-colors active:scale-95 duration-200 text-center"
-              href="#"
+              to="/checkout?plan=pro"
             >
               Mulai Gratis Sekarang
-            </a>
-            <a
+            </Link>
+            <Link
               className="font-label-bold text-label-bold border border-white/30 hover:bg-white/10 text-white px-8 py-4 rounded-lg transition-colors active:scale-95 duration-200 text-center"
-              href="#"
+              to="/solusi#kontak"
             >
               Jadwalkan Demo
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -29,6 +29,58 @@ File `code.html` dari Stitch sudah dihapus setelah konversi selesai. Yang tersis
 di `design-source/` hanya screenshot tiap halaman dan `DESIGN.md` — murni acuan,
 tidak ikut ter-build.
 
+## Integrasi Checkout API
+
+Landing memanggil Checkout API KaiSpace v2 dan **berhenti di pembayaran**.
+Pembuatan organization, provisioning, dan pemilihan provider OAuth sepenuhnya
+urusan backend/webhook — jangan pernah menambahkannya ke sini.
+
+| Berkas | Isi |
+|---|---|
+| `src/services/billing.js` | `createCheckoutSession()`, `getCheckoutSession()`, `ApiError` |
+| `src/services/checkoutErrors.js` | Peta error → copy Bahasa Indonesia dari spek |
+| `src/data/plans.js` | Id paket & siklus tagihan yang dikirim ke API |
+| `src/pages/Checkout.jsx` | Form + POST + redirect ke `checkoutUrl` |
+| `src/pages/CheckoutSuccess.jsx` | Polling status + redirect ke `setupUrl` |
+
+Alurnya:
+
+1. CTA mana pun → `/checkout?plan=<id>` (opsional `&billingCycle=`)
+2. Submit → `POST /api/billing/checkout-sessions` → `window.location.assign(checkoutUrl)`
+3. Provider mengembalikan pengguna ke `/checkout/success?checkoutSessionId=…`
+4. Polling `GET /api/billing/checkout-sessions/:id` tiap 3 detik, batas 3 menit
+   - `pending` → layar tunggu, terus dicoba
+   - `provisioned` → `window.location.replace(setupUrl)`
+   - `failed` → pesan hubungi support
+   - habis waktu / jaringan putus → tombol coba lagi
+
+`setupUrl` divalidasi harus `http:`/`https:` sebelum dipakai, supaya respons yang
+disusupi tidak bisa menjalankan `javascript:`.
+
+### Base URL
+
+Lihat `.env.example`. Di produksi landing satu origin dengan backend di belakang
+reverse proxy, jadi `VITE_API_BASE` dibiarkan kosong dan `/api` sudah benar.
+Untuk dev terhadap sandbox, isi `VITE_DEV_API_PROXY` — Vite meneruskan `/api`
+ke sana (berlaku untuk `npm run dev` maupun `npm run preview`) sehingga tidak
+kena CORS. Jangan pernah menulis domain langsung di kode.
+
+### Rute yang BUKAN milik landing
+
+`/login`, `/@*`, `/_platform`, `/api/*`, `/socket.io/*` dimiliki
+aplikasi/backend dan diteruskan reverse proxy. Landing tidak boleh
+mendefinisikan rute untuk itu. Catch-all di `App.jsx` sengaja merender halaman
+404, **bukan** Beranda, supaya salah konfigurasi proxy langsung kelihatan.
+
+Tautan ke alamat milik aplikasi (mis. tombol "Masuk" → `/login`) harus memakai
+`<a href>` biasa, jangan `<Link>` — kalau memakai `<Link>`, React Router menahan
+navigasinya di klien dan permintaannya tidak pernah sampai ke proxy.
+
+### Aset
+
+Output build ada di `/landing-assets/*` (`build.assetsDir`) dan berkas statis di
+`public/landing-assets/*`. `/assets/*` milik aplikasi — jangan dipakai.
+
 ## Struktur
 
 ```

@@ -1,8 +1,13 @@
+import { Link } from 'react-router-dom'
 import Icon from '../../components/Icon.jsx'
 
+// `planId` harus cocok dengan id di src/data/plans.js — itu nilai yang dikirim
+// ke Checkout API. Enterprise tidak lewat checkout mandiri, jadi diarahkan ke
+// form kontak.
 const PLANS = [
   {
     name: 'Gratis',
+    planId: 'free',
     tagline: 'Untuk individu atau tim kecil yang baru memulai.',
     price: 'Rp 0',
     period: '/bulan',
@@ -17,6 +22,7 @@ const PLANS = [
   },
   {
     name: 'Tim',
+    planId: 'pro',
     tagline: 'Kekuatan penuh untuk kolaborasi tim yang berkembang.',
     price: 'Rp 150k',
     period: '/pengguna/bulan',
@@ -32,6 +38,8 @@ const PLANS = [
   },
   {
     name: 'Enterprise',
+    planId: null,
+    contactPath: '/solusi#kontak',
     tagline: 'Keamanan tingkat lanjut dan kontrol untuk organisasi besar.',
     price: 'Kustom',
     period: '',
@@ -46,6 +54,11 @@ const PLANS = [
     ],
   },
 ]
+
+/** Tujuan tombol CTA: checkout untuk paket mandiri, form kontak untuk Enterprise. */
+function planHref(plan) {
+  return plan.planId ? `/checkout?plan=${plan.planId}` : plan.contactPath
+}
 
 function PlanCard({ plan }) {
   if (plan.popular) {
@@ -66,12 +79,12 @@ function PlanCard({ plan }) {
             <span className="font-body-md text-body-md text-primary-fixed-dim">{plan.period}</span>
           )}
         </div>
-        <button
-          type="button"
-          className="w-full py-3 mb-stack-lg rounded bg-on-primary text-primary-container font-label-bold text-label-bold hover:bg-surface-bright transition-colors"
+        <Link
+          to={planHref(plan)}
+          className="w-full py-3 mb-stack-lg rounded bg-on-primary text-primary-container font-label-bold text-label-bold hover:bg-surface-bright transition-colors text-center block"
         >
           {plan.cta}
-        </button>
+        </Link>
         <ul className="space-y-4 flex-grow">
           {plan.features.map((feature) => (
             <li
@@ -96,12 +109,12 @@ function PlanCard({ plan }) {
           <span className="font-body-md text-body-md text-on-surface-variant">{plan.period}</span>
         )}
       </div>
-      <button
-        type="button"
-        className="w-full py-3 mb-stack-lg rounded border border-primary text-primary font-label-bold text-label-bold hover:bg-surface-dim transition-colors"
+      <Link
+        to={planHref(plan)}
+        className="w-full py-3 mb-stack-lg rounded border border-primary text-primary font-label-bold text-label-bold hover:bg-surface-dim transition-colors text-center block"
       >
         {plan.cta}
-      </button>
+      </Link>
       <ul className="space-y-4 flex-grow">
         {plan.features.map((feature) => (
           <li key={feature} className="flex items-center text-on-surface font-body-md text-body-md">

@@ -1,10 +1,10 @@
-import { Link } from 'react-router-dom'
+﻿import { Link } from 'react-router-dom'
 import Icon from '../../components/Icon.jsx'
 
 const AVATARS = [
-  { src: '/images/avatar-1.svg', alt: 'Anggota tim KaiSpace' },
-  { src: '/images/avatar-2.svg', alt: 'Anggota tim KaiSpace' },
-  { src: '/images/avatar-3.svg', alt: 'Anggota tim KaiSpace' },
+  { src: '/landing-assets/images/avatar-1.svg', alt: 'Anggota tim KaiSpace' },
+  { src: '/landing-assets/images/avatar-2.svg', alt: 'Anggota tim KaiSpace' },
+  { src: '/landing-assets/images/avatar-3.svg', alt: 'Anggota tim KaiSpace' },
 ]
 
 export default function Hero() {
@@ -35,13 +35,13 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap items-center gap-4 w-full">
-            <a
+            <Link
               className="font-label-bold text-label-bold bg-primary-container text-white px-8 py-4 rounded-lg hover:bg-primary-hover transition-all active:scale-95 duration-200 shadow-lg shadow-primary-container/30 flex items-center gap-2"
-              href="#"
+              to="/checkout?plan=pro"
             >
               Buat Space
               <Icon name="arrow_forward" className="text-sm" />
-            </a>
+            </Link>
             <Link
               className="font-label-bold text-label-bold text-primary border-2 border-primary-container/20 px-8 py-4 rounded-lg hover:border-primary-container hover:bg-surface-container transition-all active:scale-95 duration-200"
               to="/fitur"
@@ -75,7 +75,7 @@ export default function Hero() {
                 bersih, aksen ungu vibrant, aesthetic light-mode korporat. */}
             <img
               className="w-full h-full object-cover"
-              src="/images/hero-virtual-office.svg"
+              src="/landing-assets/images/hero-virtual-office.svg"
               alt="Ilustrasi isometrik ruang kantor virtual KaiSpace"
             />
 

@@ -1,4 +1,4 @@
-import Icon from '../../components/Icon.jsx'
+﻿import Icon from '../../components/Icon.jsx'
 
 export default function FeaturesBento() {
   return (
@@ -36,7 +36,7 @@ export default function FeaturesBento() {
                   bercahaya di latar putih, aksen ungu terang. */}
               <img
                 className="w-full h-full object-contain"
-                src="/images/feature-kolaborasi-instan.svg"
+                src="/landing-assets/images/feature-kolaborasi-instan.svg"
                 alt=""
               />
             </div>
@@ -90,7 +90,7 @@ export default function FeaturesBento() {
                   karpet geometris, tanaman) di latar putih bersih. */}
               <img
                 className="absolute inset-0 w-full h-full object-cover"
-                src="/images/feature-kustomisasi-ruang.svg"
+                src="/landing-assets/images/feature-kustomisasi-ruang.svg"
                 alt="Aset interior untuk kustomisasi ruang virtual"
               />
             </div>

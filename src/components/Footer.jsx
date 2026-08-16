@@ -28,6 +28,8 @@ const COLUMNS = [
       { label: 'Tentang Kami', href: '#' },
       { label: 'Karir', href: '#' },
       { label: 'Kontak', to: '/solusi#kontak' },
+      { label: 'Syarat Layanan', to: '/terms' },
+      { label: 'Kebijakan Privasi', to: '/privacy' },
     ],
   },
 ]

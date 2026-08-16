@@ -9,6 +9,11 @@ const NAV_LINKS = [
 ]
 
 const KONTAK_TO = '/solusi#kontak'
+const CHECKOUT_PATH = '/checkout?plan=pro'
+
+// Milik aplikasi, bukan landing — reverse proxy yang meneruskannya.
+// Harus dibuka lewat <a>, jangan lewat React Router.
+const APP_LOGIN_PATH = '/login'
 
 const linkBase =
   'font-label-bold text-label-bold transition-colors active:scale-95 duration-200 pb-1'
@@ -88,18 +93,20 @@ export default function Header() {
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
+          {/* `<a>` biasa, bukan <Link>: /login milik aplikasi dan dilayani
+              reverse proxy, jadi navigasinya harus sampai ke server. */}
           <a
             className="font-label-bold text-label-bold text-primary border border-primary px-4 py-2 rounded-lg hover:bg-surface-container transition-colors active:scale-95 duration-200"
-            href="#"
+            href={APP_LOGIN_PATH}
           >
             Masuk
           </a>
-          <a
+          <Link
             className="font-label-bold text-label-bold bg-primary-container text-white px-5 py-2 rounded-lg hover:bg-primary-hover transition-colors active:scale-95 duration-200"
-            href="#"
+            to={CHECKOUT_PATH}
           >
             Mulai Gratis
-          </a>
+          </Link>
         </div>
 
         {/* Mobile menu toggle */}
@@ -142,16 +149,16 @@ export default function Header() {
           <div className="flex flex-col gap-3 pt-4 border-t border-surface-dim">
             <a
               className="font-label-bold text-label-bold text-primary border border-primary px-4 py-2 rounded-lg text-center hover:bg-surface-container transition-colors"
-              href="#"
+              href={APP_LOGIN_PATH}
             >
               Masuk
             </a>
-            <a
+            <Link
               className="font-label-bold text-label-bold bg-primary-container text-white px-5 py-2 rounded-lg text-center hover:bg-primary-hover transition-colors"
-              href="#"
+              to={CHECKOUT_PATH}
             >
               Mulai Gratis
-            </a>
+            </Link>
           </div>
         </div>
       )}

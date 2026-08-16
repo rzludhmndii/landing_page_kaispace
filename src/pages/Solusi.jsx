@@ -1,4 +1,4 @@
-import SolusiBento from '../sections/solusi/SolusiBento.jsx'
+﻿import SolusiBento from '../sections/solusi/SolusiBento.jsx'
 import SolusiMasalah from '../sections/solusi/SolusiMasalah.jsx'
 import ContactSection from '../sections/solusi/ContactSection.jsx'
 
@@ -16,7 +16,7 @@ export default function Solusi() {
               <span className="text-primary-container">Untuk Siapa Saja.</span>
             </h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
-              Dari percakapan sehari-hari sampai pertanggungjawaban jam kerja — KaiSpace menyatukan
+              Dari percakapan sehari-hari sampai pertanggungjawaban jam kerja â€” KaiSpace menyatukan
               ruang kerja tim jarak jauh Anda dalam satu tempat yang hangat dan mudah diakses.
             </p>
           </div>
@@ -27,7 +27,7 @@ export default function Solusi() {
               className="bg-cover bg-center w-full h-full"
               role="img"
               aria-label="Avatar tim berinteraksi di ruang kantor virtual KaiSpace"
-              style={{ backgroundImage: "url('/images/solusi-hero.svg')" }}
+              style={{ backgroundImage: "url('/landing-assets/images/solusi-hero.svg')" }}
             />
           </div>
         </div>
