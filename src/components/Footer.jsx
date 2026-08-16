@@ -26,7 +26,7 @@ const COLUMNS = [
     title: 'Perusahaan',
     links: [
       { label: 'Tentang Kami', href: '#' },
-      { label: 'Karir', href: '#' },
+      { label: 'Karier', href: '#' },
       { label: 'Kontak', to: '/solusi#kontak' },
       { label: 'Syarat Layanan', to: '/terms' },
       { label: 'Kebijakan Privasi', to: '/privacy' },
@@ -46,7 +46,7 @@ export default function Footer() {
             Membawa kehangatan kantor ke ruang kerja jarak jauh Anda.
           </p>
           <p className="font-body-md text-body-md text-outline-variant opacity-80">
-            © 2024 KaiSpace. All rights reserved.
+            © {new Date().getFullYear()} KaiSpace. Seluruh hak cipta dilindungi.
           </p>
           <div className="flex gap-4 mt-2">
             <a

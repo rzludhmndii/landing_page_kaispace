@@ -1,4 +1,4 @@
-﻿import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import FeatureRow from '../sections/fitur/FeatureRow.jsx'
 import KemampuanGrid from '../sections/fitur/KemampuanGrid.jsx'
 
@@ -11,9 +11,9 @@ const FEATURES = [
     iconClassName: 'bg-secondary-container/20 text-secondary-container',
     title: 'Kolaborasi Instan',
     description:
-      'Dekati avatar rekan tim, dan suara langsung tersambung â€” tanpa undangan, tanpa tautan meeting. Volume mengikuti jarak, persis seperti mendekati meja seseorang di kantor sungguhan.',
+      'Dekati avatar rekan tim, dan suara langsung tersambung tanpa undangan maupun tautan meeting. Volume mengikuti jarak, persis seperti mendekati meja seseorang di kantor sungguhan.',
     bullets: [
-      'Audio & video aktif otomatis dalam radius tiga tile.',
+      'Audio dan video aktif otomatis dalam radius tiga tile.',
       'Panggilan langsung antar-peserta, bukan lewat server perantara.',
       'Emote, angkat tangan, colek, dan ikuti rekan berjalan.',
       'Papan nama, status khusus, dan alasan saat sedang pergi.',
@@ -32,7 +32,7 @@ const FEATURES = [
       'Zona berlabel: meeting, meja kerja, fokus, dan umum.',
       'Kunci zona serta pintu berdasarkan peran anggota.',
       'Antrean otomatis dan persetujuan sebelum seseorang masuk.',
-      'Chat khusus zona â€” hanya sampai ke orang di ruangan yang sama.',
+      'Chat khusus zona, hanya sampai ke orang di ruangan yang sama.',
     ],
     image: '/landing-assets/images/fitur-minimalkan-distraksi.svg',
     imageAlt: 'Zona fokus terkunci dengan antrean masuk',
@@ -91,7 +91,7 @@ const FEATURES = [
     iconClassName: 'bg-primary/10 text-primary',
     title: 'Kalender, Tugas & Analitik',
     description:
-      'Jadwal, pekerjaan harian, dan kondisi tim berada di tempat yang sama dengan ruang kerjanya â€” jadi tidak perlu berpindah aplikasi untuk tahu apa yang sedang berjalan.',
+      'Jadwal, pekerjaan harian, dan kondisi tim berada di tempat yang sama dengan ruang kerjanya, jadi tidak perlu berpindah aplikasi untuk tahu apa yang sedang berjalan.',
     bullets: [
       'Acara berulang, pengingat, dan ekspor ke format ICS.',
       'Pemesanan ruang meeting yang tersambung ke ruang virtual.',
