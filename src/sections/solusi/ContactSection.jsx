@@ -68,7 +68,7 @@ export default function ContactSection() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="font-label-bold text-label-bold text-on-background" htmlFor="nama">
-                  Nama Lengkap
+                  Nama lengkap
                 </label>
                 <input
                   id="nama"
@@ -86,7 +86,7 @@ export default function ContactSection() {
                   className="font-label-bold text-label-bold text-on-background"
                   htmlFor="email"
                 >
-                  Email Kerja
+                  Email kerja
                 </label>
                 <input
                   id="email"
@@ -106,7 +106,7 @@ export default function ContactSection() {
                 className="font-label-bold text-label-bold text-on-background"
                 htmlFor="perusahaan"
               >
-                Nama Perusahaan / Organisasi
+                Nama perusahaan / organisasi
               </label>
               <input
                 id="perusahaan"
@@ -121,7 +121,7 @@ export default function ContactSection() {
 
             <div className="space-y-2">
               <label className="font-label-bold text-label-bold text-on-background" htmlFor="pesan">
-                Pesan / Kebutuhan (Opsional)
+                Pesan / kebutuhan (opsional)
               </label>
               <textarea
                 id="pesan"
