@@ -129,6 +129,17 @@ export default {
         'label-bold': ['14px', { lineHeight: '20px', fontWeight: '600' }],
       },
 
+      // Transisi halus saat panel pratinjau berganti (KalenderShowcase).
+      keyframes: {
+        'fade-in': {
+          '0%': { opacity: '0', transform: 'translateY(4px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
+      animation: {
+        'fade-in': 'fade-in 240ms ease-out',
+      },
+
       // DESIGN.md > Elevation & Depth: ambient shadow yang sangat lembut.
       boxShadow: {
         soft: '0 10px 40px rgba(26, 26, 46, 0.05)',

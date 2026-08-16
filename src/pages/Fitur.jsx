@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import FeatureRow from '../sections/fitur/FeatureRow.jsx'
 import KemampuanGrid from '../sections/fitur/KemampuanGrid.jsx'
+import KalenderShowcase from '../sections/fitur/KalenderShowcase.jsx'
 
 // Deskripsi di bawah mengikuti kemampuan yang benar-benar berjalan di aplikasi
 // KaiSpace (route server dan/atau komponen UI). Lihat catatan di README sebelum
@@ -86,23 +87,10 @@ const FEATURES = [
     imageAlt: 'Panel absensi dengan geofence dan aturan shift',
     reversed: false,
   },
-  {
-    icon: 'event_available',
-    iconClassName: 'bg-primary/10 text-primary',
-    title: 'Kalender, Tugas & Analitik',
-    description:
-      'Jadwal, pekerjaan harian, dan kondisi tim berada di tempat yang sama dengan ruang kerjanya, jadi tidak perlu berpindah aplikasi untuk tahu apa yang sedang berjalan.',
-    bullets: [
-      'Acara berulang, pengingat, dan ekspor ke format ICS.',
-      'Pemesanan ruang meeting yang tersambung ke ruang virtual.',
-      'Daftar tugas harian per anggota.',
-      'Ringkasan keterlibatan, waktu respons, dan penyelesaian tugas.',
-    ],
-    image: '/landing-assets/images/fitur-kalender-analitik.svg',
-    imageAlt: 'Kalender tim, daftar tugas, dan ringkasan analitik',
-    reversed: true,
-  },
 ]
+// Catatan: baris "Kalender, Tugas & Analitik" tidak ada di daftar ini karena
+// dirender oleh KalenderShowcase — versi interaktif dengan panel pratinjau yang
+// berganti saat salah satu kemampuan diklik.
 
 export default function Fitur() {
   return (
@@ -138,6 +126,12 @@ export default function Fitur() {
             </section>
           )
         })}
+
+        {/* Baris keenam, interaktif. Latar bernada mengikuti pola selang-seling
+            baris di atasnya (baris ganjil bernada). */}
+        <section className="px-gutter bg-surface-container-low py-section-padding-mobile md:py-section-padding-desktop">
+          <KalenderShowcase />
+        </section>
 
         <KemampuanGrid />
 
