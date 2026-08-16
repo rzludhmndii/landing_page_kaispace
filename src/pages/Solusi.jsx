@@ -1,4 +1,5 @@
 import SolusiBento from '../sections/solusi/SolusiBento.jsx'
+import SolusiMasalah from '../sections/solusi/SolusiMasalah.jsx'
 import ContactSection from '../sections/solusi/ContactSection.jsx'
 
 export default function Solusi() {
@@ -33,6 +34,7 @@ export default function Solusi() {
       </section>
 
       <SolusiBento />
+      <SolusiMasalah />
       <ContactSection />
     </div>
   )

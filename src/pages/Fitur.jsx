@@ -1,4 +1,5 @@
 import FeatureRow from '../sections/fitur/FeatureRow.jsx'
+import KemampuanGrid from '../sections/fitur/KemampuanGrid.jsx'
 
 const FEATURES = [
   {
@@ -81,6 +82,8 @@ export default function Fitur() {
             </section>
           )
         })}
+
+        <KemampuanGrid />
 
         {/* CTA Section */}
         <section className="px-gutter py-section-padding-mobile">

@@ -82,6 +82,23 @@ saturasi dan lightness yang bergeser, jadi semuanya satu keluarga.
 Sisanya — surface terang, `on-surface`, outline, tipografi Inter, spacing,
 radius — disalin persis dari `design-source/DESIGN.md`.
 
+## Aturan isi konten fitur
+
+Bagian `Semua Kemampuan KaiSpace` (`src/sections/fitur/KemampuanGrid.jsx`) dan
+`Dari Masalah Harian` (`src/sections/solusi/SolusiMasalah.jsx`) mendaftar
+kemampuan produk. Aturannya:
+
+> Sebuah kemampuan hanya boleh dicantumkan kalau punya padanan nyata di aplikasi
+> — route server dan/atau komponen UI client. Model database saja tidak cukup.
+
+Contoh yang sengaja **tidak** dicantumkan: modul dokumen (`Doc`, `Folder`,
+`DocVersion`, `DocPermission` ada di `schema.prisma`, tapi tidak ada route
+maupun UI-nya), jadi belum boleh dipasarkan.
+
+Catatan: `project.md` di repo aplikasi sudah tertinggal jauh dari kode. Kalau
+memperbarui daftar ini, baca `server/src/routes/`, `server/src/socket/`, dan
+`client/src/components/` — bukan `project.md`.
+
 ## Ikon
 
 Material Symbols Outlined dimuat lewat Google Fonts di `index.html`. Pakai
